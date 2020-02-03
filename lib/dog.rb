@@ -27,16 +27,6 @@ class Dog
     DB[:conn].execute(sql)
   end
   
-  def save
-    sql = <<-SQL
-    INSERT INTO dogs (name, breed)
-    VALUES (?, ?)
-    SQL
-    
-    DB[:conn].execute(sql, self.name, self.breed)
-    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
-    self
-  end
   
   def self.create(attributes_hash)
     dog = self.new(attributes_hash)
@@ -93,7 +83,20 @@ class Dog
     end.first
   end
   
+  def save
+    sql = <<-SQL
+    INSERT INTO dogs (name, breed)
+    VALUES (?, ?)
+    SQL
+    
+    DB[:conn].execute(sql, self.name, self.breed)
+    @id = DB[:conn].execute("SELECT last_insert_rowid() FROM dogs")[0][0]
+    self
+  end
   
+  def update
+    
+  end
   
   
   
