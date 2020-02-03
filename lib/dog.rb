@@ -101,7 +101,7 @@ class Dog
     WHERE id = ?
     SQL
     
-    DB[:conn]
+    DB[:conn].execute
   end
   
   
