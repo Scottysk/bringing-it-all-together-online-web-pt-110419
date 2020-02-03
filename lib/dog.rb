@@ -88,7 +88,8 @@ class Dog
     WHERE name = ?
     SQL
     
-    DB[:conn].execute(sql, name).map do |map|
+    DB[:conn].execute(sql, name).map do |row|
+      
   end
   
   
