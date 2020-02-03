@@ -54,7 +54,7 @@ class Dog
     self.new(attributes_hash)
   end
   
-  def self.find_by_id
+  def self.find_by_id(row)
     sql = <<-SQL
       SELECT * FROM dogs 
       WHERE id = ?
