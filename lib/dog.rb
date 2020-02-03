@@ -38,6 +38,8 @@ class Dog
     self
   end
   
+  def self.new_from_db
+  
   
   
   
