@@ -29,6 +29,7 @@ class Dog
   
   def save
     sql = <<-SQL
+    INSERT 
   end
   
   
