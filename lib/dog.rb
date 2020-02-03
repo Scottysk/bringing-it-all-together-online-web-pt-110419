@@ -33,7 +33,7 @@ class Dog
     VALUES (?, ?)
     SQL
     
-    DB[:conn].
+    DB[:conn].execute()
   end
   
   
