@@ -40,7 +40,7 @@ class Dog
   
   def self.new_from_db(row)
     new_dog = self.new
-    new_dog = 
+    new_dog.id = 
   end
   
   
