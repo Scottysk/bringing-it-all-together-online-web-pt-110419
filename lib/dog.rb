@@ -34,7 +34,7 @@ class Dog
     SQL
     
     DB[:conn].execute(sql, self.name, self.breed)
-    DB[:conn].
+    @id = DB[:conn].
   end
   
   
