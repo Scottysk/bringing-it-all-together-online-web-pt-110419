@@ -41,6 +41,7 @@ class Dog
   def self.create(attributes_hash)
     dog = self.new(attributes_hash)
     dog.save
+    dog
     
   end
   
